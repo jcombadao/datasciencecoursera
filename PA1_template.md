@@ -276,9 +276,8 @@ meanStepsInterval2 <- activity %.% group_by(interval, dayType) %.% summarise(mea
 
 
 plot2 <- ggplot(data = meanStepsInterval2, mapping = aes(x = interval, y = meanSteps)) + 
-    geom_line() + facet_grid(dayType ~ .) + scale_x_continuous("Day Interval", 
-    breaks = seq(min(meanStepsInterval2$interval), max(meanStepsInterval2$interval), 
-        100)) + scale_y_continuous("Average Number of Steps") + ggtitle("Average Number of Steps Taken by Interval")
+    geom_line() + facet_grid(dayType ~ .) + scale_x_continuous("Day Interval") + 
+    scale_y_continuous("Average Number of Steps") + ggtitle("Average Number of Steps Taken by Interval")
 plot2
 ```
 
